@@ -9,11 +9,11 @@ const router = express.Router();
 //Add product
 router.post('/addProduct/:firmId',productController.addProduct);
 //get all pros by firm id
-router.get('/products', auth, productController.getAllproductsByfirm);
+router.get('/products', productController.getAllProductsByFirm);
 //one product
 router.get('/product/:id', productController.getProduct);
 //delete product
-router.delete('/:productId', auth, productController.deleteProduct);
+router.delete('/:productId', productController.deleteProduct);
 //images
 
 router.get('/uploads/:imageName',(req,res)=>{
