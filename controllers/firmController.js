@@ -48,7 +48,7 @@ module.exports.deleteFirm = async (req, res) => {
         return res.status(404).json({ msg: 'Firm not found' });
       }
   
-      await firm.remove();
+      await firm.deleteOne();
       res.json({ msg: 'Firm removed' });
     } catch (err) {
       console.error(err.message);
